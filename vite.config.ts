@@ -20,5 +20,6 @@ export default defineConfig({
   server: {
     open: true,
     port: 3003
-  }
+  },
+  base: '/health-react-app/',
 })
