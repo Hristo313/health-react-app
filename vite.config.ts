@@ -21,5 +21,5 @@ export default defineConfig({
     open: true,
     port: 3003
   },
-  base: '/health-react-app/',
+  base: 'https://Hristo313.github.io/health-react-app/',
 })
