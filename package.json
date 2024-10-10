@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "homepage": "https://Hristo313.github.io/health-react-app/",
+  "homepage": "/health-react-app/",
   "dependencies": {
     "@infragistics/igniteui-react": "18.6.1",
     "@infragistics/igniteui-react-charts": "18.6.1",
