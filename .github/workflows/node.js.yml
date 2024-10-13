@@ -44,7 +44,7 @@ jobs:
     - run: echo "//packages.infragistics.com/npm/js-licensed/:_auth=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
     - run: echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
     - run: npm i
-    - run: npm run build
+    - run: npm run build -- --base=/repo-name/
     - name: github-pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
