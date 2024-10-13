@@ -31,8 +31,6 @@ jobs:
     - run: echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
     - run: npm i # replace with 'npm ci' after committing lock file from first install
 #    - run: npm run lint
-    - name: Set environment variable for basename
-      run: echo "REACT_APP_BASENAME=/${{ github.event.repository.name }}" >> $GITHUB_ENV
     - run: npm run build
     - run: npm run test
 
@@ -47,7 +45,7 @@ jobs:
     - run: echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
     - run: npm i
     - name: Set environment variable for basename
-      run: echo "REACT_APP_BASENAME=/${{ github.event.repository.name }}" >> $GITHUB_ENV
+      run: echo "VITE_BASENAME=/${{ github.event.repository.name }}" >> $GITHUB_ENV
     - run: npm run build -- --base=/${{ github.event.repository.name }}/
     - name: github-pages
       uses: peaceiris/actions-gh-pages@v3
