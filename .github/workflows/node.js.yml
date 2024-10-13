@@ -47,6 +47,9 @@ jobs:
     - name: Set environment variable for basename
       run: echo "VITE_BASENAME=/${{ github.event.repository.name }}" >> $GITHUB_ENV
     - run: npm run build -- --base=/${{ github.event.repository.name }}/
+    - name: Update Resource Paths
+      run: |
+        find ./dist/assets -name "*.js" -exec sed -i 's|src/assets|${{ github.event.repository.name }}/assets|g' {} +
     - name: github-pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
