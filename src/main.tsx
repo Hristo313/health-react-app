@@ -15,7 +15,10 @@ const router = createBrowserRouter([
     element: <App />,
     children: [...routes]
   }
-]);
+],
+{
+  basename: "/health-react-app"
+});
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
