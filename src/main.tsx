@@ -5,7 +5,7 @@ import App from './app/app';
 import { routes } from "./app/app-routes";
 import 'react-app-polyfill/ie11';
 
-const basename = process.env.REACT_APP_BASENAME || '/';
+// const basename = process.env.REACT_APP_BASENAME || '/';
 
 /** Required in IE11 for Charts */
 Number.isNaN = Number.isNaN || function(value) {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   }
 ],
 {
-  basename: basename
+  basename: "/health-react-app"
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
